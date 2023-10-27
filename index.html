@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function setUsername(){
+            document.getElementById("username-p").innerHTML = document.getElementById("username").value + " Gallery";
+        }
+
+        function setprofileimg(){
+            document.getElementById("profileImage").style.backgroundImage = "url(" + document.getElementById("profileimg").value + ")";
+        }
+    </script>
+</head>
+<body>
+    <div class="content"> 
+        <div class="avatar">
+            <div class="profile-img" id="profileImage">
+            </div>
+            <div class="noti">1</div>
+        </div>
+        <div class="username"></div>
+            <a href="https://github.com/" class="on-hover">
+            <p style="font-size: x-large; font-weight: 600;" id="username-p">ITF Gallery</p>
+            </a>
+        <div class="input-group">
+            <div><label style="font-weight: 400;">Set the username</label><input style="margin-left: 10px;" type="text" 
+                id="username"><button  style="margin-left: 10px;" id="setUsername" onclick="setUsername()">set</button></div>
+            <div><label style="font-weight: 400;">Set the profile image URL</label><input style="margin-left: 10px;" type="text" 
+                id="profileimg"><button  style="margin-left: 10px;" id="setImg" onclick="setprofileimg()">set</button></div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item col-span" style="background-image: url(https://ichef.bbci.co.uk/news/640/cpsprodpb/1124F/production/_119932207_indifferentcatgettyimages.png);"></div>
+            <div class="gallery-item" style="background-image: url(https://i0.wp.com/ngthai.com/app/uploads/2023/05/%E0%B9%81%E0%B8%A1%E0%B8%A7.jpg?resize=640%2C336&ssl=1);"></div>
+            <div class="gallery-item" style="background-image: url(https://files.eventpass.co/eventpass-api/file/1663321612508.jpg);"></div>
+            <div class="gallery-item" style="background-image: url(https://production-rabbit-care-blog.imgix.net/2023/05/vaccines-for-cat-1.jpg?auto=compress%2Cformat&crop=faces%2Ccenter&fit=scale&h=768&q=50&w=1024);"></div>
+            <div class="gallery-item row-span" style="background-image: url(data:image/jpeg;base64,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);"></div>
+            <div class="gallery-item" style="background-image: url(https://i.pinimg.com/236x/25/19/f1/2519f1e7775751a59d0b31fc2a54e7bb.jpg);"></div>
+            <div class="gallery-item" style="background-image: url(https://i.pinimg.com/236x/d8/9d/b3/d89db3527e882d962eea7e6a2e2d6803.jpg);"></div>
+            <div class="gallery-item" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-VhoZwvbv6Xp5FsaYDmejG4t9ua3SnXsxgXbj60AGS5kY7GABhGpeGy_WXxleuQWbVo&usqp=CAU);"></div>
+            <div class="gallery-item" style="background-image: url(https://digitalmore.co/wp-content/uploads/2022/09/Cat-Memes-05.jpg);"></div>
+            <div class="gallery-item" style="background-image: url(https://pakmud.com/wp-content/uploads/2023/03/%E0%B8%A1%E0%B8%B5%E0%B8%A1%E0%B9%81%E0%B8%A1%E0%B8%A7-55.jpg)"></div>
+            <div class="gallery-item" style="background-image: url(https://pakmud.com/wp-content/uploads/2023/03/%E0%B8%A1%E0%B8%B5%E0%B8%A1%E0%B9%81%E0%B8%A1%E0%B8%A7-32.jpg);"></div>
+            <div class="gallery-item" style="background-image: url(https://pakmud.com/wp-content/uploads/2023/03/%E0%B8%A1%E0%B8%B5%E0%B8%A1%E0%B9%81%E0%B8%A1%E0%B8%A7-54.jpg);"></div>
+        </div>
+    </div>
+</body>
+</html>
